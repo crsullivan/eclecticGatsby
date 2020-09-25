@@ -3,7 +3,6 @@ import { Layout } from "../components/layout"
 import { Router as MyRouter } from "@reach/router"
 
 const Router = () => {
-  const sample = ""
   return (
     <MyRouter>
       <Layout path="/app/random-person/" />

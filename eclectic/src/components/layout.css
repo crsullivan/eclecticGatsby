@@ -595,15 +595,25 @@ pre tt:after {
     font-size: 100%;
   }
 }
-.carousel {
-  max-width: 75%;
+.top-line {
+  height: 1px;
+  width: 90%;
+  border-bottom: 1px solid rgb(22, 255, 22);
   margin: auto;
 }
+.carousel {
+  max-width: 85%;
+  margin: auto;
+  margin-top: 2rem;
+  z-index: 0;
+}
 .carousel div {
-  /* background: white; */
+  background: white;
+  max-height: 75vh;
 }
 .carousel-image {
-  /* object-fit: cover; */
+  object-fit: fill;
+  margin-top: -4rem;
 }
 header {
   display: flex;
@@ -621,6 +631,39 @@ header h1 {
   display: flex;
   justify-content: space-evenly;
 }
+.intro {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider {
+  background: rgb(0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateY(100%);
+}
+.intro-text {
+  color: rgb(233, 233, 233);
+  font-family: "Heebo", sans-serif;
+  font-size: 3rem;
+}
+.hide {
+  background: black;
+  overflow: hidden;
+}
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
+}
 footer {
   position: relative;
   left: 0;
@@ -636,7 +679,7 @@ footer {
 }
 footer img {
   width: 17rem;
-  height: 8rem;
+  height: 7rem;
   margin-left: 2rem;
   margin-top: 1rem;
 }
