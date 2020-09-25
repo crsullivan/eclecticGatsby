@@ -1,6 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
 import Footer from "./footer"
 import Header from "./header"
 import Landing from "./landing"
@@ -17,18 +15,7 @@ tl.fromTo(".carousel", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 tl.fromTo("footer", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=2");
 tl.fromTo(".big-text", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 
-const Layout = () => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
-  return (
+const Layout = () => (
     <>
       <Header/>
       <div class="intro">
@@ -51,14 +38,11 @@ const Layout = () => {
             crossorigin="anonymous"
             >
       </script>
+      
       <Landing />
       <Footer/>
     </>
-  )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+  
+)
 
 export default Layout
